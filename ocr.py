@@ -14,7 +14,7 @@ def fileToTextData(file_path, dpi=300):
     for i, img in enumerate(images):
         print(f"Processing page {i + 1}...")
         data = pytesseract.image_to_data(img, output_type=pytesseract.Output.DICT)
-        allData.append({"page": i + 1, "data": data})
+        allData.append(data)
     
     print("Text extraction complete.")
     return allData
